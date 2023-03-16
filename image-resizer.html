@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Image Resizer</title>
+    </head>
+    <body>
+        <h1>Image Resizer</h1>
+        <form>
+            <input type="file" id="fileInput" accept="image/*">
+            <br>
+            <label><input type="checkbox" name="size" value="128" checked> 128px</label>
+            <label><input type="checkbox" name="size" value="48" checked> 48px</label>
+            <label><input type="checkbox" name="size" value="32" checked> 32px</label>
+            <label><input type="checkbox" name="size" value="16" checked> 16px</label>
+            <br>
+            <button type="button" onclick="resizeImage()">Resize</button>
+        </form>
+        <hr>
+        <h2>Resized Images</h2>
+        <div id="result"></div>
+        <a id="downloadBtn" style="display:none;">Download All</a> <!-- 修正箇所 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.3.0/jszip.min.js"></script> <!-- JSZipを読み込む -->
+        <script src="script.js"></script>
+    </body>
+</html>
