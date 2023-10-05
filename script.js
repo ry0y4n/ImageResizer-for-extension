@@ -24,7 +24,7 @@ function resizeImage() {
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
                 canvas.toBlob((blob) => {
                     const url = URL.createObjectURL(blob);
-                    zip.file(`image-${size}px.png`, blob);
+                    zip.file(`icon-${size}px.png`, blob);
                     resolve(url);
                 });
             });
